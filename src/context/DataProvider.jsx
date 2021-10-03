@@ -1,11 +1,13 @@
-import React, {createContext, useState} from "react";
+import React, {createContext, useState} from 'react';
 export const DataContext = createContext();
 
 function DataProvider({children}) {
-  const [count, setcount] = useState(0)
+  const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(1);
   return(
     <DataContext.Provider value={{
-        count, setcount
+      movies, setMovies,
+      page, setPage
     }}>
       {children}
     </DataContext.Provider>
