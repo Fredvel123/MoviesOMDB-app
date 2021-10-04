@@ -1,8 +1,7 @@
 import React, {useContext, Fragment, useEffect} from 'react'
 import { DataContext } from '../context/DataProvider';
 import { Link } from 'react-router-dom';
-function CardsMovies({match}) {
-  console.log(match);
+function CardsMovies() {
   const { movies, setMovies, input, page } = useContext(DataContext);
   useEffect(() =>{
     const getApi = async () => {
@@ -11,7 +10,7 @@ function CardsMovies({match}) {
       setMovies(res_JSON.Search);
     }
     getApi();
-    
+    // eslint-disable-next-line
   }, [])
   return (
     <Fragment>

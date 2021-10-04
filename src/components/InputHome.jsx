@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect, useContext} from 'react';
+import React, {Fragment, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../context/DataProvider';
 
@@ -24,9 +24,7 @@ function InputHome() {
   }, [])
   const sendInfo = e => {
     e.preventDefault();
-    // console.log(movies);
     getApi();
-    
   }
   return (
     <Fragment>
