@@ -22,9 +22,21 @@ span{
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 25px
 }
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 .card-single-movie p{
     font-size: 25px;
     font-family: 'PT Sans', sans-serif;
+    padding: 5px 0;
+}
+@media screen and (max-width: 700px) {
+    .card-single-movie{
+        width: 80%;
+    }   
+}
+@media screen and (max-width: 450px) {
+    .card-single-movie{
+        width: 95%;
+    }   
 }
