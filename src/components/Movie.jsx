@@ -1,6 +1,5 @@
 import React, {useEffect, useState, Fragment} from 'react'
 import HeaderTwo from './HeaderTwo';
-import { Link } from 'react-router-dom';
 import '../styles/singleMovie.css'
 import Footer from './Footer';
 
