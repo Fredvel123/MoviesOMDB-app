@@ -1,6 +1,7 @@
 import React, {useContext, Fragment, useEffect} from 'react'
 import { DataContext } from '../context/DataProvider';
 import { Link } from 'react-router-dom';
+import HeaderInput from './HeaderInput'
 function CardsMovies() {
   const { movies, setMovies, input, page } = useContext(DataContext);
   useEffect(() =>{
@@ -14,6 +15,7 @@ function CardsMovies() {
   }, [])
   return (
     <Fragment>
+      <HeaderInput/>
       {movies 
         ? movies.map(item => (
             <div key={item.imdbID} className="home-card">
