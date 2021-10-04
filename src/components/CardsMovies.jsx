@@ -3,6 +3,7 @@ import { DataContext } from '../context/DataProvider';
 import { Link } from 'react-router-dom';
 import '../styles/cards.css'
 import HeaderTwo from './HeaderTwo';
+import Footer from './Footer';
 function CardsMovies() {
   const { movies, setMovies, input, page } = useContext(DataContext);
   useEffect(() =>{
@@ -32,6 +33,7 @@ function CardsMovies() {
             ))
           : null}
       </div>
+      <Footer/>
     </Fragment>
   );
 }

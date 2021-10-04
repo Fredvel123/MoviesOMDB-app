@@ -2,6 +2,7 @@ import React, {useEffect, useState, Fragment} from 'react'
 import HeaderTwo from './HeaderTwo';
 import { Link } from 'react-router-dom';
 import '../styles/singleMovie.css'
+import Footer from './Footer';
 
 
 function Movie({match}) {
@@ -29,6 +30,7 @@ function Movie({match}) {
           <p><span>Writers: </span>{singleMovie.Writer}</p>
         </div>
       </div>
+      <Footer />
     </Fragment>
   );
 }

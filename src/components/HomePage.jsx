@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 import InputHome from './HeaderInput';
 
 function HomePage() {
@@ -33,6 +34,7 @@ function HomePage() {
           </div>
         ))}
       </div>
+      <Footer/>
     </Fragment>
   );
 }
