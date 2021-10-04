@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react'
-
+import React, {useEffect, useState, Fragment} from 'react'
+import { Link } from 'react-router-dom';
+import InputHome from './InputHome';
 function Movie({match}) {
   const [singleMovie, setSingleMovie] = useState([]);
   useEffect(() => {
@@ -11,7 +12,21 @@ function Movie({match}) {
       getSingleMovieInfo();
       // eslint-disable-next-line
   }, [match])
-  return <h1>{singleMovie.Title}</h1>
+  return (
+    <Fragment>
+      <InputHome/>
+      <div className="single-movie" key={singleMovie.imdbID}>
+        <img src={singleMovie.Poster} alt="" />
+        <h1>{singleMovie.Title}</h1>
+        <h1>{singleMovie.Plot}</h1>
+        <h1>{singleMovie.Released}</h1>
+        <h1>{singleMovie.Runtime}</h1>
+        <h1>{singleMovie.Actors}</h1>
+        <h1>{singleMovie.Writer}</h1>
+      </div>
+      <Link to="/">Back to home page</Link>
+    </Fragment>
+  );
 }
 
 export default Movie
