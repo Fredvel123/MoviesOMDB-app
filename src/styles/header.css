@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+header {
+    background: crimson;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 20vh;
+}
+
+.icon {
+    display: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+.logo a{
+    background: salmon;
+    display: flex;
+    align-items: center;
+}
+.logo a p {
+    color: #fff;
+    margin-left: 10px;
+    font-family: 'Noto Sans Display', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+}

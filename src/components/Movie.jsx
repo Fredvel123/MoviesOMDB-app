@@ -1,6 +1,6 @@
 import React, {useEffect, useState, Fragment} from 'react'
 import { Link } from 'react-router-dom';
-import InputHome from './InputHome';
+import InputHome from './HeaderInput';
 function Movie({match}) {
   const [singleMovie, setSingleMovie] = useState([]);
   useEffect(() => {
