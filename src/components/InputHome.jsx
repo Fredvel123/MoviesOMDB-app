@@ -1,9 +1,9 @@
-import React, {Fragment, useEffect, useContext} from 'react';
+import React, {Fragment, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../context/DataProvider';
 
 function InputHome() {
-  const { setMovies, page, input, setInput } = useContext(DataContext);
+  const { input, setInput } = useContext(DataContext);
   
   const onChange = e => {
     const {name, value} = e.target;
@@ -13,18 +13,8 @@ function InputHome() {
     }))
   };
   // code to get the api.
-  const getApi = async () => {
-    const urlInfo = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=87c0c98e&page=${page}&s=${input.titleMovie}`);
-    const res_JSON = await urlInfo.json();
-    setMovies(res_JSON.Search);
-  }
-  useEffect(() => {
-    getApi();
-    // eslint-disable-next-line  
-  }, [])
   const sendInfo = e => {
     e.preventDefault();
-    getApi();
   }
   return (
     <Fragment>
