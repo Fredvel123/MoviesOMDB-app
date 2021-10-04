@@ -1,11 +1,10 @@
-import React, {Fragment, useState, useEffect, useContext} from 'react'
+import React, {Fragment, useState, useEffect, useContext} from 'react';
+import { Link } from 'react-router-dom';
 import { DataContext } from '../context/DataProvider';
 
 function InputHome() {
-  const { movies, setMovies, page } = useContext(DataContext);
-  const [input, setInput] = useState({
-      titleMovie: ""
-  });
+  const { setMovies, page, input, setInput } = useContext(DataContext);
+  
   const onChange = e => {
     const {name, value} = e.target;
     setInput((prevInput) => ({
@@ -25,8 +24,9 @@ function InputHome() {
   }, [])
   const sendInfo = e => {
     e.preventDefault();
-    console.log(movies);
+    // console.log(movies);
     getApi();
+    
   }
   return (
     <Fragment>
@@ -37,7 +37,7 @@ function InputHome() {
           placeholder="Type any movie here!"
           value={input.titleMovie}
           onChange={onChange} />
-          <button>search</button>
+          <Link to="/movies"><button>search</button></Link>
       </form>
     </Fragment>
   );

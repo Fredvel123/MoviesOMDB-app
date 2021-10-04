@@ -13,9 +13,9 @@ function Home() {
         this wil be the proyect here
         <Switch>
           <Route path="/" exact component={InputHome} />
-          <Route path="/:imdbID" component={Movie}/>
+          <Route path="/movies" exact component={CardsMovies} />
+          <Route path="/movies/:imdbID" component={Movie}/>
         </Switch>
-        <CardsMovies />
       </Router>
     </DataProvider>
   );
