@@ -76,3 +76,25 @@ button:hover{
     background: rgb(255, 255, 255);
     color: black;
 }
+@media screen and (max-width: 1150px ) {
+    input {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 605px ) {
+    form{
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 20vh;
+        width: 100%;
+        background: #121212;
+        padding: 50px 0;
+    }
+    .form2{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+}

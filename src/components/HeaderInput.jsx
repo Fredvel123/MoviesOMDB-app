@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment, useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../context/DataProvider';
 import logo from '../icons/logo-icon.jpg';
@@ -7,7 +7,7 @@ import '../styles/header.css'
 
 function InputHome() {
   const { input, setInput } = useContext(DataContext);
-  
+  const [icon2, setIcon2] = useState(false);
   const onChange = e => {
     const {name, value} = e.target;
     setInput((prevInput) => ({
@@ -18,6 +18,7 @@ function InputHome() {
   // code to get the api.
   const sendInfo = e => {
     e.preventDefault();
+    console.log(input);
   }
   return (
     <Fragment>
@@ -29,7 +30,7 @@ function InputHome() {
           </Link>
         </div>
 
-        <form action="" onSubmit={sendInfo}>
+        <form action="" onSubmit={sendInfo} className={!icon2 ? "form2" : ""}>
           <input
             type="text"
             name="titleMovie"
@@ -43,7 +44,7 @@ function InputHome() {
         </form>
 
         <div className="icon">
-          <img src={icon} alt="" width="50px" />
+          <img src={icon} alt="" width="50px" onClick={() => setIcon2(!icon2)}/>
         </div>
       </header>
     </Fragment>

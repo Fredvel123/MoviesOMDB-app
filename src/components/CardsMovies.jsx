@@ -1,7 +1,8 @@
 import React, {useContext, Fragment, useEffect} from 'react'
 import { DataContext } from '../context/DataProvider';
 import { Link } from 'react-router-dom';
-import HeaderInput from './HeaderInput'
+import '../styles/cards.css'
+import HeaderTwo from './HeaderTwo';
 function CardsMovies() {
   const { movies, setMovies, input, page } = useContext(DataContext);
   useEffect(() =>{
@@ -15,17 +16,22 @@ function CardsMovies() {
   }, [])
   return (
     <Fragment>
-      <HeaderInput/>
-      {movies 
-        ? movies.map(item => (
-            <div key={item.imdbID} className="home-card">
-              <Link to={`/movies/${item.imdbID}`}>
-                <img src={item.Poster} alt="" />
-                <h1>{item.Title}</h1>
-              </Link>
-            </div>
-          ))
-        : null}
+      <HeaderTwo />
+      <div className="card-back">
+        {movies
+          ? movies.map((item) => (
+              <div key={item.imdbID} className="home-card">
+                <Link to={`/movies/${item.imdbID}`}>
+                  <img src={item.Poster} alt="" />
+                  <div className="text">
+                    <h3>{item.Title}</h3>
+                    <p>See More information</p>
+                  </div>
+                </Link>
+              </div>
+            ))
+          : null}
+      </div>
     </Fragment>
   );
 }
