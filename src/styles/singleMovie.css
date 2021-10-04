@@ -1,3 +1,30 @@
 .single-movie {
-    background: crimson;
+    background: rgb(34, 34, 34);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(201, 201, 201);
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=PT+Sans&display=swap');
+span{
+    color: rgb(255, 30, 75);
+    font-family: 'PT Sans', sans-serif;
+}
+.card-single-movie {
+    text-align: left;
+    padding: 10px 0;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.card-single-movie img {
+    height: 75vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+.card-single-movie p{
+    font-size: 25px;
+    font-family: 'PT Sans', sans-serif;
 }

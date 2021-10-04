@@ -17,17 +17,18 @@ function Movie({match}) {
   }, [match])
   return (
     <Fragment>
-        <HeaderTwo/>
+      <HeaderTwo />
       <div className="single-movie" key={singleMovie.imdbID}>
-        <img src={singleMovie.Poster} alt="" />
-        <h1>{singleMovie.Title}</h1>
-        <h1>{singleMovie.Plot}</h1>
-        <h1>{singleMovie.Released}</h1>
-        <h1>{singleMovie.Runtime}</h1>
-        <h1>{singleMovie.Actors}</h1>
-        <h1>{singleMovie.Writer}</h1>
+        <div className="card-single-movie">
+          <img src={singleMovie.Poster} alt="" />
+          <p><span>Title: </span> {singleMovie.Title}</p>
+          <p><span>Resume: </span>{singleMovie.Plot}</p>
+          <p><span>Released: </span>{singleMovie.Released}</p>
+          <p><span>Duration: </span>{singleMovie.Runtime}</p>
+          <p><span>Actors: </span>{singleMovie.Actors}</p>
+          <p><span>Writers: </span>{singleMovie.Writer}</p>
+        </div>
       </div>
-      <Link to="/">Back to home page</Link>
     </Fragment>
   );
 }
