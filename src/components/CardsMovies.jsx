@@ -16,9 +16,10 @@ function CardsMovies() {
     <Fragment>
       {movies 
         ? movies.map(item => (
-            <div key={item.imdbID} >
+            <div key={item.imdbID} className="home-card">
               <Link to={`/movies/${item.imdbID}`}>
                 <img src={item.Poster} alt="" />
+                <h1>{item.Title}</h1>
               </Link>
             </div>
           ))
