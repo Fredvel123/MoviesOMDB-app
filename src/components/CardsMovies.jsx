@@ -2,10 +2,11 @@ import React, {useContext, Fragment} from 'react'
 import { DataContext } from '../context/DataProvider';
 import { Link } from 'react-router-dom';
 function CardsMovies() {
-  const { movies } = useContext(DataContext);
+  const { movies,open } = useContext(DataContext);
+  console.log(movies);
   return (
     <Fragment>
-      {movies
+      {movies && open
         ? movies.map(item => (
             <div key={item.imdbID}>
               <Link to={`/${item.imdbID}`}>

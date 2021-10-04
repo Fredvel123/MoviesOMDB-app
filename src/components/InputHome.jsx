@@ -37,7 +37,7 @@ function InputHome() {
           placeholder="Type any movie here!"
           value={input.titleMovie}
           onChange={onChange} />
-        <button>Search</button>
+          <button>search</button>
       </form>
     </Fragment>
   );

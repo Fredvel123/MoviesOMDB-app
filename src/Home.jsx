@@ -11,12 +11,11 @@ function Home() {
     <DataProvider>
       <Router>
         this wil be the proyect here
-        <InputHome />
         <Switch>
+          <Route path="/" exact component={InputHome} />
           <Route path="/:imdbID" component={Movie}/>
         </Switch>
         <CardsMovies />
-
       </Router>
     </DataProvider>
   );
