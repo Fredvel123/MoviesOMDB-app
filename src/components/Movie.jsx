@@ -8,7 +8,7 @@ function Movie({match}) {
   const [singleMovie, setSingleMovie] = useState([]);
   useEffect(() => {
     const getSingleMovieInfo = async () => {
-      const url_info = await fetch(`http://www.omdbapi.com/?i=${match.params.imdbID}&apikey=87c0c98e`);
+      const url_info = await fetch(`https://www.omdbapi.com/?i=${match.params.imdbID}&apikey=87c0c98e`);
       const res_JSON = await url_info.json();
       setSingleMovie(res_JSON);
     }
